@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+	<link rel="stylesheet" href="css/themes/temas.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="js/jQueryMobile/jquery.mobile.structure-1.4.5.min.css" type="text/css"/> 
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>    
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Class Schedule App</title>
+    <style type="text/css">
+<!--
+.Estilo11 {color: #0080FF; font-weight: bold; font-size: 20px; }
+.Estilo13 {font-size: 14px}
+-->
+    </style>
+</head>
+
+<body>
+		<div data-role="page" id="inicio">
+			<div data-role="header">
+				<h1>Inicio</h1>
+			</div>
+			<div data-role="content">
+				<center>
+				<img src="img/Class Schedule Icono.png" width="200px" height="200px" data-iconpos="notext"/>
+				<a href="#iniciar" data-role="button" data-iconpos="right" data-icon="user" data-transition="slidedown">Iniciar Sesión</a>
+				<a href="#crearcuenta" data-role="button" data-iconpos="right" data-icon="plus" data-transition="slidedown">Crear Cuenta</a>
+				
+				</center>
+			</div>
+			<div data-role="footer" data-position="fixed">
+			</div>
+		</div>
+		
+		<div data-role="page" id="iniciar">
+				<div data-role="header">
+					<h1>Iniciar Sesión </h1>
+					<a href="#menu" data-role="button" data-icon="bars" data-iconpos="notext" data-inline="true">inicio</a>
+					<!--a href="#inicio" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true">atras</a-->
+					<a href="#crearhorario" data-role="button" data-icon="arrow-r" data-iconpos="notext" data-inline="true">siguiente</a>
+				</div>
+				<div data-role="content">
+					<center>
+					<h4>Ingresa tus Datos</h4>
+					<img src="img/perfil-azul.png" width="170" height="170" data-iconpos="notext"/>
+					<div data-role="fieldcontaint">
+						<label form="txt_usuario">Usuario:</label>
+						<input type="text" value="" name="txt_usuario" id="txt_usuario"/>
+					</div>
+					<div data-role="fieldcontaint">
+						<label form="txt_contraseña">Contraseña:</label>
+						<input type="password" value="" name="txt_contraseña" id="txt_contraseña"/>
+					</div>
+				<div data-role="fieldcontaint">
+					<a href="#crearhorario" data-role="button"data-icon="check">Validar</a>
+				</div>
+				</div>
+				<div data-role="footer" data-position="fixed">
+				</div>
+		</div>
+		
+		<div data-role="page" id="crearcuenta">
+				<div data-role="header">
+					<h1>Crear Cuenta</h1>
+				<a href="#inicio" data-role="button" data-icon="back" data-iconpos="notext">inicio</a>
+				<a href="#iniciar" data-role="button" data-icon="arrow-r" data-iconpos="notext">siguiente</a>
+				</div>
+		  <div data-role="content">
+			<center>
+			  <img src="img/add-perfil.png" width="170" height="170" data-iconpos="notext"/>			
+					<table width="269" border="0" align="center">
+					  <tr>
+						<td><div align="right">Usuario:</div></td>
+						<td colspan="3"><div align="right">
+						  <input type="text" value="" name="txt_nombre2" id="txt_nombre2"/>
+						</div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Contraseña:</div></td>
+						<td colspan="3">
+						  <div align="right">
+							<input type="password" value="" name="txt_contraseña" id="txt_contraseña"/>
+						  </div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Nombre:</div></td>
+						<td colspan="3">
+						  <div align="right">
+							<input type="text" value="" name="txt_nombre" id="txt_nombre"/>
+						  </div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Apellidos:</div></td>
+						<td colspan="3">
+						  <div align="right">
+							<input type="text" value="" name="txt_apellidos" id="txt_apellidos"/>
+						  </div></td>
+					  </tr>
+					  <tr>
+						<td width="88"><div align="right">Grado:</div></td>
+						<td width="57">
+						  <div align="right">
+							<select name="selGrado"data-inline="true">
+							  <option value="1">1°ro</option>
+							  <option value="2">2°do</option>
+							  <option value="3">3°ro</option>
+							  <option value="4">4°to</option>
+							</select>
+							</div></td>
+						<td width="48">
+						  
+							<div align="right">Grupo:</div></td>
+						<td width="58"><div align="right">
+						  <select name="select"data-inline="true">
+							<option value="A">"A"</option>
+							<option value="B">"B"</option>
+							<option value="C">"C"</option>
+							<option value="D">"D"</option>
+						  </select>
+						</div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Teléfono:</div></td>
+						<td colspan="3">
+						  <div align="right">
+							<input type="number" value="" name="txt_telefono" id="txt_telefono" />
+						  </div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">No. Control:</div></td>
+						<td colspan="3">
+						  <div align="right">
+							<input type="number" value="" name="txt_ncontrol" id="txt_ncontrol"/>
+						  </div></td>
+					  </tr>
+					</table>
+
+				<a href="#inicio" data-role="button" data-icon="delete"  data-theme="d" data-inline="true">Cancelar</a>
+				<a href="#iniciar" data-role="button" data-icon="check" data-inline="true">Aceptar</a>
+				</center>
+				</div>
+				<div data-role="footer" data-position="fixed" data-id="idfooter">
+				</div>
+		</div>
+		
+		<div data-role="page" id="crearhorario">
+				<div data-role="header">
+					<h1>Crear Horario</h1>
+				<a href="#inicio" data-role="button" data-icon="back" data-iconpos="notext">inicio</a>
+				<a href="#Principal" data-role="button" data-icon="arrow-r" data-iconpos="notext">siguiente</a>
+				</div>
+					<div data-role="content">
+					<center>
+					<table width="269" border="0" align="center">
+					  <tr>
+						<td><div align="right">Hora Inicio:</div></td>
+						<td colspan="3"><div align="right">
+						<input type="time" value="" name="txt_hi" id="txt_hi"/>
+						</div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Hora Final:</div></td>
+						<td colspan="3">
+						  <div align="right">
+						<input type="time" value="" name="txt_hf" id="txt_hf"/>
+						  </div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Materia:</div></td>
+						<td colspan="3">
+						  <div align="right">
+						<input type="text" value="" name="txt_materia" id="txt_materia"/>
+						  </div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Profesor:</div></td>
+						<td colspan="3">
+						  <div align="right">
+						<input type="text" value="" name="txt_profesor" id="txt_profesor"/>
+						  </div></td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Día:</div></td>
+						<td colspan="3">
+						  <div align="right">
+							<div data-role="fieldcontaint">
+								<SELECT NAME="selDia"> 
+								<OPTION VALUE="Lunes">Lunes</OPTION>
+								<OPTION VALUE="Martes">Martes</OPTION>
+								<OPTION VALUE="Miercoles">Miércoles</OPTION>
+								<OPTION VALUE="Jueves">Jueves</OPTION> 
+								<OPTION VALUE="Viernes">Viernes</OPTION> 
+								<OPTION VALUE="Sábado">Sábado</OPTION> 
+								<OPTION VALUE="Domingo">Domingo</OPTION> 
+								</SELECT>
+							</div>
+						  </div>
+						  </td>
+					  </tr>
+					  <tr>
+						<td><div align="right">Aula:</div></td>
+						<td colspan="3">
+						  <div align="right">
+						<input type="text" value="" name="txt_aula" id="txt_aula"/>
+						  </div></td>
+					  </tr>
+					</table>
+					<!--div data-role="controlgroup" data-type="horizontal"-->
+					<a href="#Principal" data-role="button" data-icon="delete" data-theme="d" data-inline="true" data-mini="true">Cancelar</a>
+					<a href="#Principal" data-role="button"data-icon="check" data-theme="a" data-inline="true" data-mini="true">Guardar</a>
+					<a href="#crearhorario" data-role="button" data-icon="plus"data-theme="c"data-inline="true" data-mini="true">Nuevo</a>
+					<!--/div-->					
+					</center>
+					</div>
+				<div data-role="footer" data-position="fixed" data-id="idfooter">
+			</div>
+		</div>	
+		
+		<div data-role="page" id="Principal">
+				<div data-role="header">
+					<div data-role="fieldcontaint"> 
+						<SELECT NAME="selOb"> 
+						<OPTION VALUE="horario"><h2>Horario</h2></OPTION>
+						<OPTION VALUE="inicio"><h2>Inicio</h2></OPTION>
+						<OPTION VALUE="avisos"><h2>Avisos</h2></OPTION>
+						</SELECT>
+					</div>
+					
+				</div>
+					<div data-role="content">
+					<a href="#avisos" data-role="button" data-icon="plus"data-theme="c"data-inline="true" data-mini="true">Avisos</a>
+					</div>
+					
+					<div data-role="footer" data-position="fixed">
+					</div>
+		</div>
+		
+		<div data-role="page" id="avisos">
+				<div data-role="header">
+					<h1>Avisos</h1>
+					<a href="#Principal" data-role="button" data-icon="arrow-l" data-iconpos="notext">atras</a>
+					<a href="#Menu" data-role="button" data-icon="play" data-iconpos="notext" id="submenuButton">inicio</a>
+				</div>
+				<div data-role="content">
+				<center>
+					<!--h2>Avisos Pendientes</h2-->
+					<table width="340" border="0" data-position="fixed">
+                      <tr>
+                        <td width="40"><div align="left"></div></td>
+                        <td width="50"><div align="center" class="Estilo11">
+                          <div align="left">Aviso</div>
+                        </div></td>
+                        <td width="180"><div align="center" class="Estilo11">Texto</div></td>
+                        <td width="76"><div align="center" class="Estilo11">
+                          <div align="right"> Hora y fecha </div>
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td><div align="left">
+                          <input type="checkbox" name="checkbox" value="checkbox">
+                        </div></td>
+                        <td><div align="left"><span class="Estilo13">Tarea 1 </span></div></td>
+                        <td><span class="Estilo13">Realizar Tarea del profe. </span></td>
+                        <td><div align="right"><span class="Estilo13">11:00 pm</span></div></td>
+                      </tr>
+                      <tr>
+                        <td><div align="left">
+                          <input type="checkbox" name="checkbox" value="checkbox">
+                        </div></td>
+                        <td><div align="left"><span class="Estilo13">Chatear</span></div></td>
+                        <td><span class="Estilo13">Abrir Facebook </span></td>
+                        <td><div align="right"><span class="Estilo13">9:00 pm </span></div></td>
+                      </tr>
+                      <tr>
+                        <td><div align="left">
+                          <input type="checkbox" name="checkbox" value="checkbox">
+                        </div></td>
+                        <td><div align="left"><span class="Estilo13">Nada</span></div></td>
+                        <td><span class="Estilo13">Bañarme</span></td>
+                        <td><div align="right"><span class="Estilo13">10:00 am </span></div></td>
+                      </tr>
+                      <tr>
+                        <td><div align="left"></div></td>
+                        <td><div align="left"><span class="Estilo13"></span><a href="#eliminar" data-role="button" data-icon="minus" data-theme="d"data-iconpos="notext">eliminar</a></div></td>
+                        <td><span class="Estilo13"></span></td>
+                        <td><div align="right"><span class="Estilo13"></span><a href="#crearAviso" data-role="button" data-icon="plus" data-theme="c"data-iconpos="notext">nuevo</a></div></td>
+                      </tr>
+                    </table>
+				</center>
+				</div>
+				<div data-role="footer" data-position="fixed">
+				</div>
+		</div>
+		
+		<div data-role="page" id="crearAviso">
+				<div data-role="header">
+					<h1>Nuevo Aviso</h1>
+					<a href="#avisos" data-role="button" data-icon="arrow-l" data-iconpos="notext">atras</a>
+					<a href="#menu" data-role="button" data-icon="bars" data-nodisc="true"data-iconpos="notext" id="submenuButton">inicio</a>
+				</div>
+				<div data-role="content">
+					<div data-role="fieldcontaint">
+						<label form="txt_nombre">Nombre del Aviso:</label>
+						<input type="text" value="" name="txt_aviso" id="txt_aviso"/>
+					</div>
+					<div data-role="fieldcontaint">
+						<label form="txt_dh">Día y Hora que Notificará:</label>
+						<input type="date" data-inline="true"/>
+						<input type="time" data-inline="true"/>
+					</div>
+					<div data-role="fieldcontaint">
+						<label form="txt_texto">Texto:</label>
+						<textarea name="txt_texto" id="txt_texto"></textarea>
+					</div>
+				</div>
+					
+				<center>
+				<div data-role="fieldcontaint">
+					<a href="#avisos" data-role="button" data-icon="delete"data-theme="d"data-inline="true" data-mini="true">Cancelar</a>
+					<a href="#guardarAviso" data-role="button" data-icon="check"data-theme="c"data-inline="true" data-mini="true">Agregar</a>
+				</div>
+				</center>
+				<div data-role="footer" data-position="fixed">
+				</div>
+		</div>
+</body>
+
+</html>
